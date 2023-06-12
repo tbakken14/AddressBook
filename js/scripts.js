@@ -1,14 +1,51 @@
 // Unhides the addContactForm element
-function handleAddContactButton(event) {
+function handleAddContactButton(addContactForm) {
     addContactForm.setAttribute("class", "");
     addContactButton.setAttribute("class", "hidden");
+}
+
+function handleAddContactFormSubmit(event, addContactForm, body) {
+    event.preventDefault();
+    const newContact = new Contact();
+    const inputs = addContactForm.getElementsByTagName("input");
+    for (const input of inputs) {
+        newContact[input.getAttribute("id")] = input.value;
+    }
+    displayNewContact(newContact, body);
+    addContactForm.setAttribute("class", "hidden");
+    addContactButton.setAttribute("class", "");
+    addContactForm.reset();
+}
+
+function displayNewContact(newContact, body) {
+    let divElement = document.createElement("div");
+    let pElement = document.createElement("p");
+    divElement.setAttribute("class", "contact-row")
+    divElement.appendChild(pElement);
+    body.appendChild(divElement);
+
+    pElement.innerHTML = newContact.firstName;
+
+    /*
+
+    .createElement("p")
+    create new element of type div
+    add new paragraph element to div for each newContact
+    append new div to body
+    */
+
+
 }
 
 window.onload = function () {
     const body = document.querySelector("body");
     const addContactButton = document.getElementById("addContactButton");
     const addContactForm = document.getElementById("addContactForm");
-    addContactButton.addEventListener("click", handleAddContactButton);
+    const addContactFormSubmitButton = document.querySelector("body form button");
+    addContactButton.addEventListener("click",
+        (event) => handleAddContactButton(addContactForm));
+    addContactFormSubmitButton.addEventListener("click",
+        (event) => handleAddContactFormSubmit(event, addContactForm, body));
 }
 
 

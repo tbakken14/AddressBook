@@ -6,3 +6,9 @@ body {
 .hidden {
     display: none;
 }
+
+.contact-row {
+    position: relative;
+    left: 10px;
+    margin: 2px;
+}
