@@ -11,5 +11,5 @@ class Contact {
     territory = "";
     country = "";
     email = "";
-    phone = "";
+    phoneNumber = "";
 }

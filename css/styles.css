@@ -1,6 +1,13 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    border: 0%;
+}
+
 body {
     background: linear-gradient(to right, white, #515151);
     text-align: center;
+    overflow-x: hidden;
 }
 
 .hidden {
@@ -8,7 +15,23 @@ body {
 }
 
 .contact-row {
+    text-align: left;
     position: relative;
-    left: 10px;
-    margin: 2px;
+    display: block;
+    width: 98vw;
+    font-size: 30px;
+    left: 0px;
+    padding-left: 1vw;
+    padding-right: 1%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: black;
+    color: white;
+    border: white 3px solid;
+    height: 50px;
+    content: justify;
+}
+
+span {
+    margin: 10px;
+    border: 2px solid red;
 }
