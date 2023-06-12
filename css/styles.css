@@ -1,3 +1,8 @@
 body {
-    background: linear-gradient(to right, #151515, #515151);
+    background: linear-gradient(to right, white, #515151);
+    text-align: center;
+}
+
+.hidden {
+    display: none;
 }

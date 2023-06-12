@@ -1,6 +1,32 @@
-let bobContact = new Contact();
-bobContact.firstName = "Bob";
-console.log(bobContact);
+// Unhides the addContactForm element
+function handleAddContactButton(event) {
+    addContactForm.setAttribute("class", "");
+    addContactButton.setAttribute("class", "hidden");
+}
+
+window.onload = function () {
+    const body = document.querySelector("body");
+    const addContactButton = document.getElementById("addContactButton");
+    const addContactForm = document.getElementById("addContactForm");
+    addContactButton.addEventListener("click", handleAddContactButton);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*function Contact(firstName = "", lastName = "", streetAddress = "", city = "", state = "", territory = "", country = "", email = "", phone = "") {
     this.firstName = firstName;
