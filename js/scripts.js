@@ -31,8 +31,13 @@ function displayNewContact(newContact) {
     let delButton = document.createElement("button");
     delButton.innerHTML = "X";
     delButton.setAttribute("class", "delete");
+    delButton.addEventListener("click", handleDeleteRow)
     divElement.appendChild(delButton);
     body.appendChild(divElement);
+}
+
+function handleDeleteRow(event) {
+    this.parentNode.remove();
 }
 
 window.onload = function () {
