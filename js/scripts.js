@@ -24,10 +24,14 @@ function displayNewContact(newContact) {
 
     for (let prop in newContact) {
         let infoElement = document.createElement("span");
+        infoElement.setAttribute("class", prop);
         infoElement.innerHTML = newContact[prop];
         divElement.appendChild(infoElement);
     }
-
+    let delButton = document.createElement("button");
+    delButton.innerHTML = "X";
+    delButton.setAttribute("class", "delete");
+    divElement.appendChild(delButton);
     body.appendChild(divElement);
 }
 
@@ -49,10 +53,8 @@ function mockData() {
     contact1 = {
         firstName: "Lionel",
         lastName: "Messi",
-        streetAddress: "",
         city: "Miami",
         state: "FL",
-        territory: "",
         country: "USA",
         email: "lmessi10@gmail.com",
         phoneNumber: "1234567890"
@@ -60,10 +62,8 @@ function mockData() {
     contact2 = {
         firstName: "Arnold",
         lastName: "Schwarzenager",
-        streetAddress: "",
         city: "Los Angeles",
         state: "CA",
-        territory: "",
         country: "USA",
         email: "ascharz@gmail.com",
         phoneNumber: "7890123456"
@@ -71,10 +71,8 @@ function mockData() {
     contact3 = {
         firstName: "Alex",
         lastName: "Hall",
-        streetAddress: "",
         city: "Denver",
         state: "CO",
-        territory: "",
         country: "USA",
         email: "ahall100@gmail.com",
         phoneNumber: "0123789456"

@@ -5,10 +5,8 @@ class Contact {
 
     firstName = "";
     lastName = "";
-    streetAddress = "";
     city = "";
     state = "";
-    territory = "";
     country = "";
     email = "";
     phoneNumber = "";
