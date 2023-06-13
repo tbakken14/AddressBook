@@ -4,19 +4,41 @@
     border: 0%;
 }
 
+body {
+    background: linear-gradient(to right, white, #515151);
+    text-align: center;
+    overflow-x: hidden;
+}
+
 form {
     font-size: 1.2em;
+    background-color: beige;
+    width: 30vw;
+    margin: auto;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+#submit {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
 }
 
 input {
     font-size: 1em;
 }
 
-body {
-    background: linear-gradient(to right, white, #515151);
-    text-align: center;
-    overflow-x: hidden;
+.input-row {
+
+    height: 40px;
 }
+
+label {
+    width: 100px;
+    height: 10px;
+}
+
 
 .hidden {
     display: none;
@@ -110,4 +132,8 @@ span:hover {
     border: 1px solid white;
     background-color: red;
     transition: all .5s;
+}
+
+label {
+    margin-top: 200px;
 }
