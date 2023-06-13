@@ -27,11 +27,12 @@ body {
     background-color: black;
     color: white;
     border: white 3px solid;
-    height: 50px;
-    content: justify;
+    top: 20px;
 }
 
 span {
-    margin: 10px;
-    border: 2px solid red;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-left: 3px solid rgb(255, 255, 255);
+
 }
