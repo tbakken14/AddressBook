@@ -11,13 +11,14 @@ function handleAddContactFormSubmit(event, addContactForm, addContactButton, bod
     for (const input of inputs) {
         newContact[input.getAttribute("id")] = input.value;
     }
-    displayNewContact(newContact, body);
+    displayNewContact(newContact);
     addContactForm.setAttribute("class", "hidden");
     addContactButton.setAttribute("class", "");
     addContactForm.reset();
 }
 
-function displayNewContact(newContact, body) {
+function displayNewContact(newContact) {
+    let body = document.querySelector("body");
     let divElement = document.createElement("div");
     divElement.setAttribute("class", "contact-row");
 
@@ -39,4 +40,49 @@ window.onload = function () {
         (event) => handleAddContactButton(addContactForm));
     addContactForm.addEventListener("submit",
         (event) => handleAddContactFormSubmit(event, addContactForm, addContactButton, body));
+    mockData();
+}
+
+
+function mockData() {
+    let contacts = [];
+    contact1 = {
+        firstName: "Lionel",
+        lastName: "Messi",
+        streetAddress: "",
+        city: "Miami",
+        state: "FL",
+        territory: "",
+        country: "USA",
+        email: "lmessi10@gmail.com",
+        phoneNumber: "1234567890"
+    }
+    contact2 = {
+        firstName: "Arnold",
+        lastName: "Schwarzenager",
+        streetAddress: "",
+        city: "Los Angeles",
+        state: "CA",
+        territory: "",
+        country: "USA",
+        email: "ascharz@gmail.com",
+        phoneNumber: "7890123456"
+    }
+    contact3 = {
+        firstName: "Alex",
+        lastName: "Hall",
+        streetAddress: "",
+        city: "Denver",
+        state: "CO",
+        territory: "",
+        country: "USA",
+        email: "ahall100@gmail.com",
+        phoneNumber: "0123789456"
+    }
+
+
+    contacts.push(contact1);
+    contacts.push(contact2);
+    contacts.push(contact3);
+    contacts.forEach((e, i, a) => displayNewContact(e));
 }
